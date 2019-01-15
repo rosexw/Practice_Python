@@ -22,3 +22,18 @@ print(allEven)
 # years_of_birth2 = [1990, 1991, 1990, 1990, 1992, 1991]
 # ages2 = [2014 - year for year in years_of_birth2]
 # print ages2
+
+# import random
+
+# numlist = []
+# list_length = random.randint(5,15)
+
+
+# while len(numlist) < list_length:
+#     numlist.append(random.randint(1,75))
+    
+
+# evenlist = [number for number in numlist if number % 2 == 0] 
+
+# print(numlist)
+# print(evenlist)
