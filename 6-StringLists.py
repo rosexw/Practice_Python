@@ -22,6 +22,10 @@ else:
 
 # # by factors of three
 # L = range(10)
+<<<<<<< HEAD
 # print L[::3]
 
 # https://docs.python.org/2.3/whatsnew/section-slices.html
+=======
+# print L[::3]
+>>>>>>> 2adf917e9c7ab2fbfc8c564e10782f6229ee835e
