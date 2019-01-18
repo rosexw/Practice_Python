@@ -53,19 +53,22 @@ choice = ['rock', 'scissors', 'paper']
 # Game loop
 continueGame = True
 def playGame(player1, player2):
-    if choice.index(player1) == (choice.index(player2) + 1) % 3:
+    choiceIndex1 = (choice.index(player1) + 1) % 3
+    choiceIndex2 = (choice.index(player2) + 1) % 3
+    if choice.index(player1) == choiceIndex2:
         print('Player 2 with ' + str(player2) + ' wins!')
-    elif choice.index(player2) == (choice.index(player1) + 1) % 3:
+    elif choice.index(player2) == choiceIndex1:
         print('Player 1 with ' + str(player1) + ' wins!')
     else:
         print("Its a draw! Try again")
+
 
 while continueGame == True:
     player1 = raw_input("Player 1 - Rock, Paper, Scissors? ").lower()
     player2 = raw_input("Player 2 - Rock, Paper, Scissors? ").lower()
     playGame(player1, player2)
-    continue_text = raw_input("Would you like to continue? Type n to exit:")
-    if(continue_text.lower() == "n"):
+    continue_text = raw_input("Would you like to continue? Type q to exit:")
+    if(continue_text.lower() == "q"):
         continueGame = False
         print("Thank you for playing. Goodbye!")
 
