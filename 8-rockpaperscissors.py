@@ -49,18 +49,20 @@
 
 print('Play a game of Rock Paper Scissors')
 
-choice = ['rock', 'scissors', 'paper']
+choices = ['rock', 'scissors', 'paper']
 # Game loop
 continueGame = True
 def playGame(player1, player2):
-    choiceIndex1 = (choice.index(player1) + 1) % 3
-    choiceIndex2 = (choice.index(player2) + 1) % 3
-    if choice.index(player1) == choiceIndex2:
+    if player1 not in choices or player2 not in choices:
+        print("Invalid entry. Try again")
+    elif choices.index(player1) == choices.index(player2):
+        print("Its a tie! Try again")
+    elif choices.index(player1) == (choices.index(player2) + 1) % 3:
         print('Player 2 with ' + str(player2) + ' wins!')
-    elif choice.index(player2) == choiceIndex1:
+    elif choices.index(player2) == (choices.index(player1) + 1) % 3:
         print('Player 1 with ' + str(player1) + ' wins!')
     else:
-        print("Its a draw! Try again")
+        print('Not found')
 
 
 while continueGame == True:
