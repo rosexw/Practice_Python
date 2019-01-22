@@ -12,20 +12,21 @@ guess = 0
 randomNum = randint(1, 9)
 
 while True:
-    # guess = raw_input("Please guess a number from 1 to 9 or type 'quit' to exit: ")
-    guess = int(raw_input("Please guess a number from 1 to 9: "))
+    guess = raw_input("Please guess a number from 1 to 9 or type 'quit' to exit: ")
 
-    # if(guess == "quit"):
-    #     print("Thank you for playing. Goodbye!")
-    #     break
-
-    count += 1;
-    if(guess == randomNum):
-        print("You guessed the number " + str(randomNum) + " in " + str(count) + " tries!")
-        break
-    elif(guess < randomNum):
-        print("Incorrect, the guess is too low. Guess higher!")
-    elif(guess > randomNum):
-        print("Incorrect, the guess is too high. Guess lower!")
+    if(guess == "quit"):
+        print("Thank you for playing. Goodbye!")
+        break 
     else:
-        print("Incorrect input, try again")
+        guess = int(guess)
+        count += 1;
+        if(guess == randomNum):
+            print("You guessed the number " + str(randomNum) + " in " + str(count) + " tries!")
+            break
+        elif(guess < randomNum):
+            print("Incorrect, the guess is too low. Guess higher!")
+        elif(guess > randomNum):
+            print("Incorrect, the guess is too high. Guess lower!")
+        else:
+            print("Incorrect input, try again")
+
