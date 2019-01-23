@@ -1,8 +1,9 @@
 # Exercise 15 -Reverse Word Order strings
 # Write a program (using functions!) that asks the user for a long string containing multiple words. Print back to the user the same string, except with the words in backwards order. For example, say I type the string:
 
+aLongString = raw_input("Please enter a long string here: ")
 
-aLongString = "here I am and there you are"
+# aLongString = "here I am and there you are"
 splitWords = aLongString.split()
 splitWords.reverse()
 result = " ".join(splitWords)
