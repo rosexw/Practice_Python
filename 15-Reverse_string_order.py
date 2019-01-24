@@ -9,6 +9,11 @@ splitWords.reverse()
 result = " ".join(splitWords)
 print(result)
 
+
+
+### FROM site or practice:
+
+
 # s="This is New York"
 # # split first
 # a=s.split()
