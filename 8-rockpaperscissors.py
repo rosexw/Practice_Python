@@ -66,10 +66,10 @@ def playGame(player1, player2):
 
 
 while continueGame == True:
-    player1 = raw_input("Player 1 - Rock, Paper, Scissors? ").lower()
-    player2 = raw_input("Player 2 - Rock, Paper, Scissors? ").lower()
+    player1 = input("Player 1 - Rock, Paper, Scissors? ").lower()
+    player2 = input("Player 2 - Rock, Paper, Scissors? ").lower()
     playGame(player1, player2)
-    continue_text = raw_input("Would you like to continue? Type q to exit:")
+    continue_text = input("Would you like to continue? Type q to exit:")
     if(continue_text.lower() == "q"):
         continueGame = False
         print("Thank you for playing. Goodbye!")

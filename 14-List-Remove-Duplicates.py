@@ -25,8 +25,8 @@ def removeDupes2(oldList):
     return list(set(oldList))
 
 
-print removeDupes1(oldList)
-print removeDupes2(oldList)
+print(removeDupes1(oldList))
+print(removeDupes2(oldList))
 
 # Go back and do Exercise 5 using sets, and write the solution for that in a different function.
 # Discussion

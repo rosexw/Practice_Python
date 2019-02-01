@@ -23,7 +23,7 @@ def createAPassword(chosenLength):
     password = ''.join(random.choice(randomChars) for char in range(chosenLength))
     print(password)
 
-passwordStrength = raw_input("How strong would you like your password to be? Pick weak, medium, strong: ")
+passwordStrength = input("How strong would you like your password to be? Pick weak, medium, strong: ")
 
 foo = ["apple", "carrot", "orange", "pineapple", "mango"]
 if passwordStrength == "weak":

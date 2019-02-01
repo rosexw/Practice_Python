@@ -23,7 +23,7 @@ list1 = []
 for bvalue in b:
     if bvalue in a and bvalue not in list1:
         list1.append(bvalue)
-print (list1 if len(list1)>0 else "There are no numbers alike in these two arrays")
+print(list1 if len(list1)>0 else "There are no numbers alike in these two arrays")
 
 
 

@@ -12,7 +12,7 @@ guess = 0
 randomNum = randint(1, 9)
 
 while True:
-    guess = raw_input("Please guess a number from 1 to 9 or type 'quit' to exit: ")
+    guess = input("Please guess a number from 1 to 9 or type 'quit' to exit: ")
 
     if(guess == "quit"):
         print("Thank you for playing. Goodbye!")

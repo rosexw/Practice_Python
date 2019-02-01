@@ -10,7 +10,7 @@
 import random
 numbers = [random.randint(1,100) for _ in range(10)]
 # numbers = [5, 10, 15, 20, 25]
-print numbers
+print(numbers)
 if len(numbers) == 0:
     print("Array is empty!")
 elif len(numbers) == 1:
