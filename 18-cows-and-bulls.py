@@ -18,7 +18,7 @@ print("Welcome to the Cows and Bulls Game!")
 guess = int(input("Enter 4 digits: "))
 
 # numberGenerated = 1038
-numberGenerated = str(random.randint(0,9999))
+numberGenerated = str(random.randint(1000,9999))
 
 numberAsAList = [int(x) for x in list(str(guess))]
 print(numberAsAList)
@@ -40,12 +40,18 @@ else:
                 bulls += 1
     
     if cows == 1 and bulls > 1:
-        print(str(cows) + " cow and " + str(bulls) + " bulls")
+        print(str(cows) + " cow, " + str(bulls) + " bulls")
     elif cows == 0 and bulls > 1:
         print(str(bulls) + " bulls")
     elif cows == 1 and bulls == 1:
-        print(str(cows) + " cow and " + str(bulls) + " bull")
+        print(str(cows) + " cow, " + str(bulls) + " bull")
     elif cows > 1 and bulls == 0:
         print(str(cows) + " cows")
+    elif cows == 1 and bulls == 0:
+        print(str(cows) + " cow")
+    elif cows == 1 and bulls > 1:
+        print(str(cows) + " cow", + str(bulls) + " bulls")
     elif cows > 1 and bulls > 1:
-        print(str(cows) + " cows and " + str(bulls) + " bulls")
+        print(str(cows) + " cows, " + str(bulls) + " bulls")
+    else:
+        print("0 cows, 0 bulls")
