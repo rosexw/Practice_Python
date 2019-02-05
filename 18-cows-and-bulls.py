@@ -58,10 +58,15 @@ if __name__=="__main__":
     print("Welcome to the Cows and Bulls Game!")
     while True:
         guess = input("Enter 4 digits: ")
-        if len(str(guess)) != 4:
+        try:
+            if len(str(guess)) != 4:
+                print("Incorrect value, please try again")
+            elif guess == "quit":
+                print("Goodbye")
+                break
+            else:
+                isthisit(int(guess))
+        except ValueError:
+            ## ValueError: Raised when a built-in operation or function receives an argument that has the right type but an inappropriate value
             print("Incorrect value, please try again")
-        elif guess == "quit":
-            print("Goodbye")
-            break
-        else:
-            isthisit(int(guess))
+  
