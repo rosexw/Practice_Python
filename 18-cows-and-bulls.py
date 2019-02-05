@@ -14,44 +14,54 @@
 
 import random
 
-print("Welcome to the Cows and Bulls Game!")
-guess = int(input("Enter 4 digits: "))
+def isthisit (guess):
+    # numberGenerated = 1038
+    numberGenerated = str(random.randint(1000,9999))
 
-# numberGenerated = 1038
-numberGenerated = str(random.randint(1000,9999))
-
-numberAsAList = [int(x) for x in list(str(guess))]
-print(numberAsAList)
-numberAsAListGen = [int(x) for x in list(str(numberGenerated))]
-print(numberAsAListGen)
-cows = 0
-bulls = 0
-
-if guess == numberGenerated:
-    cows = 4
+    numberAsAList = [int(x) for x in list(str(guess))]
+    print(numberAsAList)
+    numberAsAListGen = [int(x) for x in list(str(numberGenerated))]
+    print(numberAsAListGen)
+    cows = 0
     bulls = 0
-    print("You guessed it! " + str(cows) + " cows and " + str(bulls) + " bulls")
-else:
-    for i in range(len(numberAsAList)): # assuming the lists are of the same length
-        if numberAsAList[i] == numberAsAListGen[i]:
-            cows +=1
-        for j in range(len(numberAsAListGen)):
-            if numberAsAList[i] == numberAsAListGen[j] and numberAsAList[i] != numberAsAListGen[i]:
-                bulls += 1
-    
-    if cows == 1 and bulls > 1:
-        print(str(cows) + " cow, " + str(bulls) + " bulls")
-    elif cows == 0 and bulls > 1:
-        print(str(bulls) + " bulls")
-    elif cows == 1 and bulls == 1:
-        print(str(cows) + " cow, " + str(bulls) + " bull")
-    elif cows > 1 and bulls == 0:
-        print(str(cows) + " cows")
-    elif cows == 1 and bulls == 0:
-        print(str(cows) + " cow")
-    elif cows == 1 and bulls > 1:
-        print(str(cows) + " cow", + str(bulls) + " bulls")
-    elif cows > 1 and bulls > 1:
-        print(str(cows) + " cows, " + str(bulls) + " bulls")
+
+    if guess == numberGenerated:
+        cows = 4
+        bulls = 0
+        print("You guessed it! " + str(cows) + " cows and " + str(bulls) + " bulls")
     else:
-        print("0 cows, 0 bulls")
+        for i in range(len(numberAsAList)): # assuming the lists are of the same length
+            if numberAsAList[i] == numberAsAListGen[i]:
+                cows +=1
+            for j in range(len(numberAsAListGen)):
+                if numberAsAList[i] == numberAsAListGen[j] and numberAsAList[i] != numberAsAListGen[i]:
+                    bulls += 1
+        
+        if cows == 1 and bulls > 1:
+            print(str(cows) + " cow, " + str(bulls) + " bulls")
+        elif cows == 0 and bulls > 1:
+            print(str(bulls) + " bulls")
+        elif cows == 1 and bulls == 1:
+            print(str(cows) + " cow, " + str(bulls) + " bull")
+        elif cows > 1 and bulls == 0:
+            print(str(cows) + " cows")
+        elif cows == 1 and bulls == 0:
+            print(str(cows) + " cow")
+        elif cows == 1 and bulls > 1:
+            print(str(cows) + " cow", + str(bulls) + " bulls")
+        elif cows > 1 and bulls > 1:
+            print(str(cows) + " cows, " + str(bulls) + " bulls")
+        else:
+            print("0 cows, 0 bulls")
+
+if __name__=="__main__":
+    print("Welcome to the Cows and Bulls Game!")
+    while True:
+        guess = input("Enter 4 digits: ")
+        if len(str(guess)) != 4:
+            print("Incorrect value, please try again")
+        elif guess == "quit":
+            print("Goodbye")
+            break
+        else:
+            isthisit(int(guess))
